@@ -28,12 +28,25 @@ public class ConsoleExercises {
 //        System.out.println(wordTwo);
 //        System.out.println(wordThree);
 
-        System.out.print("Enter a sentence: ");
-//        String sentence = scanner.next();
-        String sentence = scanner.nextLine();
+//        System.out.print("Enter a sentence: ");
+////        String sentence = scanner.next();
+//        String sentence = scanner.nextLine();
+//
+//        System.out.println("You entered: " + sentence);
 
-        System.out.println("You entered: " + sentence);
+        System.out.print("Enter the length of your home office: ");
+        String lengthString = scanner.nextLine();
+        double length = Double.parseDouble(lengthString);
 
+        System.out.print("Enter the width of your home office: ");
+        String widthString = scanner.nextLine();
+        double width = Double.parseDouble(widthString);
+
+        double area = length * width;
+        double perimeter = 2 * (length + width);
+
+        System.out.println("The area of the home office is: " + area);
+        System.out.println("The perimeter of the home office is: " + perimeter);
 
 
     }
@@ -49,3 +62,13 @@ public class ConsoleExercises {
 //
 //do you capture all the words? - No only the first word.
 //Rewrite the above example using the nextLine method. - You capture the whole sentence.
+
+//Prompt the user to enter values of length and width of a classroom at Codeup (or your room if virtual).
+//
+//Use the nextLine method each time you need to get user input. In this case, we need it twice, once to get the user input for the length and again to get the user input for the width. Parse the resulting strings to a numeric type.
+//
+//Assume that the rooms are perfect rectangles.
+//Assume that the user will enter valid numeric data for length and width.
+//Display the area and perimeter of that classroom.
+//
+//The area of a rectangle is equal to the length times the width, and the perimeter of a rectangle is equal to 2 times the length plus 2 times the width.
