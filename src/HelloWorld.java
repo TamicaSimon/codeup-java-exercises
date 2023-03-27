@@ -6,7 +6,7 @@ public class HelloWorld {
         int myFavoriteNumber = 10;
         System.out.println(myFavoriteNumber);
 
-        String myString = "Tamica SImon";
+        String myString = "Tamica Simon";
         System.out.println(myString);
 
         double myNumber = 3.14;
@@ -24,7 +24,7 @@ public class HelloWorld {
         String theNumberThree = "three";
         Object o = theNumberThree;
 //        int three = (int) o;
-        int three = (int) "three";
+//        int three = (int) "three";
 
 //int x = 4;
 //x = x + 5; (x+=5)
