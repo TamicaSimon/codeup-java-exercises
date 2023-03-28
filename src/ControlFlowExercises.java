@@ -1,3 +1,6 @@
+import javax.lang.model.SourceVersion;
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        DO WHILE LOOPS
@@ -32,27 +35,45 @@ public class ControlFlowExercises {
 //            num++;
 //
 //        } while (num <=100);
-
-        for (int num = 1; num <=100; num++){
-            if (num % 3 ==0){
-                System.out.println("Fizz");
-            } else if (num % 5 == 0) {
-                System.out.println("Buzz");
-            } else if (num % 3 ==0 && num % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else {
-                System.out.println(num);
-            }
-        }
-        }
-}
-
-
-//Fizzbuzz
 //
-//        One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
+//        for (int num = 1; num <=100; num++){
+//            if (num % 3 ==0){
+//                System.out.println("Fizz");
+//            } else if (num % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else if (num % 3 ==0 && num % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else {
+//                System.out.println(num);
+//            }
+//        }
+//        }
+//}
+
+//        TABLE OF POWERS
+        Scanner input = new Scanner(System.in);
+        String choice;
+        do {
+        System.out.println("Enter an integer: ");
+        int num = input.nextInt();
+
+        System.out.println("Number\tSquare\tCube");
+        for (int i=1; i <= num; i++) {
+            int square = i * i;
+            int cube = i * i * i;
+            System.out.println(i + "\t" + square + "\t" + cube);
+        }
+           System.out.println("Do you want to continue (Yes/No)");
+            choice = input.next();
+        } while (choice.equalsIgnoreCase("Yes"));
+        }
+    }
+
+
+//        Display a table of powers.
 //
-//        Write a program that prints the numbers from 1 to 100.
-//        For multiples of three: print “Fizz” instead of the number.
-//        For the multiples of five: print “Buzz”.
-//        For numbers which are multiples of both three and five: print “FizzBuzz”.
+//                Prompt the user to enter an integer.
+//        Display a table of squares and cubes from 1 to the value entered.
+//        Ask if the user wants to continue.
+//        Assume that the user will enter valid data.
+//        Only continue if the user agrees to.
