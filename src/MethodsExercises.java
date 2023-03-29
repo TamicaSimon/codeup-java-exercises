@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //            int a = 7;
 //            int b = 4;
 //            System.out.println(Math.addExact(a, b));
@@ -22,31 +22,41 @@ public class MethodsExercises {
 //
 //        System.out.println(Math.divideExact(a, b));
 //    }
-        int a = 14;
-        int b = 10;
+//        int a = 14;
+//        int b = 10;
+//        int c = a%b;
+//        System.out.println(c);
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        int input;
 
-        int c = a%b;
+        do {
+            System.out.printf("Enter a number between %d and %d: ", min, max);
+            while (!scanner.hasNextInt()) {
+                System.out.printf("Enter a valid number between %d and %d: ", min, max);
+                scanner.next();
+            }
+            input = scanner.nextInt();
+        } while (input < min || input > max);
 
-        System.out.println(c);
+        return input;
+    }
+
+    public static void main(String[] args) {
+        int userInput = getInteger(2, 20);
+        System.out.printf("The number you entered is %d", userInput);
+    }
 }
-}
 
-
-
-
-
-//Basic Arithmetic
+//Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range. If not, prompt the user to input their number again until the input is within range.
 //
-//Create four separate methods. Each will perform an arithmetic operation:
+//The method signature should look like this:
 //
-//Addition
-//Subtraction
-//Multiplication
-//Division
-//Each function needs to take two parameters/arguments so that the operation can be performed.
 //
-//Test your methods and verify the output.
+//public static int getInteger(int min, int max);
+//and is used like this:
 //
-//Add a modulus method that finds the modulus of two numbers.
 //
-//Food for thought: What happens if we try to divide by zero? What should happen?
+//System.out.print("Enter a number between 1 and 10: ");
+//int userInput = getInteger(1, 10);
+//
