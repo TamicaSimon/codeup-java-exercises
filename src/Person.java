@@ -1,23 +1,35 @@
 public class Person {
     private String name;
-    public String getName;
 
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void sayHello() {
+        System.out.println("Hello, my name is " + name);
+    }
+
+    public static void main(String[] args) {
+        Person person = new Person("Tamica");
+
+        String name = person.getName();
+        System.out.println("Name: " + name);
+
+        person.sayHello();
+
+        person.setName("John");
+
+        String newName = person.getName();
+        System.out.println("New name: " + newName);
+
+        person.sayHello();
+    }
 }
-
-
-//Create Person class inside of src that has a private name field that is a string, and the following methods:
-//public String getName(){
-////TODO: return the person's name
-//}
-//
-//public void setName(String name){
-////TODO: change the name field to the passed value
-//}
-//public void sayHello(){
-////TODO: print a message to the console using the person's name
-//}
-//The class should have a constructor that accepts a `String` value and sets
-//the person's name to the passed string.
-//
-//Create a `main` method on the class that creates a new `Person` object and
-//tests the above methods.
